@@ -63,14 +63,14 @@ begin
         set => set,
         clear => clear,
         enable => enable,
-        D => D,
+        D => Q_vector(3),
         clk => clk,
         Q => Q_vector(0)
     );
 
     FF1: Dflip_flop port map (
-        set => set,
-        clear => clear,
+        set => clear,
+        clear => set,
         enable => enable,
         D => Q_vector(0),
         clk => clk,
@@ -78,8 +78,8 @@ begin
     );
 
     FF2: Dflip_flop port map (
-        set => set,
-        clear => clear,
+        set => clear,
+        clear => set,
         enable => enable,
         D => Q_vector(1),
         clk => clk,
@@ -87,8 +87,8 @@ begin
     );
 
     FF3: Dflip_flop port map (
-        set => set,
-        clear => clear,
+        set => clear,
+        clear => set,
         enable => enable,
         D => Q_vector(2),
         clk => clk,
